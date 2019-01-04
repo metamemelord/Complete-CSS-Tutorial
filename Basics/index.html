@@ -13,45 +13,223 @@
       rel="stylesheet"
     />
     <link rel="shortcut icon" href="favicon.png" />
+    <link rel="stylesheet" href="./shared.css" />
   </head>
   <style>
-    * {
-      box-sizing: border-box;
-    }
     section {
       color: rgb(233, 113, 113);
     }
     h1 {
-      color: white;
       font-family: "Thasadith", sans-serif;
     }
     #product-overview {
-      background: green;
-      width: 50%;
-      height: 100%;
-    }
-    #plans {
-      background: lightcoral;
-    }
-    #plans h1 {
-      color: yellow;
+      background: url("./freedom.jpg");
+      width: 100%;
+      height: 528px;
+      padding: 15px;
+      box-sizing: border-box;
     }
 
-    main {
-      height: 600px;
+    #product-overview > h1 {
+      color: white;
+      margin-left: 20px;
     }
-    body {
+
+    #plans {
+      text-align: center;
+    }
+
+    .plan__list {
+      width: 80%;
+      margin: auto;
+    }
+
+    .plan {
+      background: rgb(230, 152, 152);
+      /* text-align: center; */
+      padding: 16px;
+      margin: 8px;
+      display: inline-block;
+      width: 30%;
+      vertical-align: middle;
+      box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.3);
+      transition: box-shadow 0.3s;
+    }
+    .plan:hover {
+      box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.2);
+    }
+    .plan--highlighted {
+      background: lightcoral;
+      color: white;
+    }
+    .plan--highlighted .plan__price {
+      color: #777777;
+    }
+
+    .plan__annotation {
+      padding: 8px;
+      background: white;
+      color: lightcoral;
+      border-radius: 7px;
+      border: 1px solid;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+    .plan__annotation:hover {
+      background: lightcoral;
+      color: white;
+      border: 1px solid white;
+    }
+
+    .plan__features {
+      list-style: none;
+      margin: 0px 0px 20px 0px;
+      padding: 0;
+    }
+
+    .plan__features > li {
+      margin: 10px 0px;
+    }
+
+    .plan__title {
+      font-size: 30px;
+    }
+
+    .plan__price {
+      color: #555555;
+    }
+
+    #key-features {
+      background: rgb(219, 82, 82);
+      margin-top: 80px;
+      padding: 16px;
+      color: white;
+      text-align: center;
+    }
+
+    #key-features .section-title {
+      color: white;
+      margin: 32px;
+    }
+
+    .key-feature__list {
+      list-style: none;
       margin: 0;
-      font-family: "Montserrat", sans-serif;
+      padding: 0;
+    }
+
+    .key-feature {
+      display: inline-block;
+      width: 30%;
+      vertical-align: top;
+    }
+
+    .key-feature__image {
+      background: lightcoral;
+      width: 128px;
+      height: 128px;
+      border: 2px solid #424242;
+      border-radius: 50%;
+      margin: auto;
+    }
+
+    .key-feature__description {
+      text-align: center;
+      font-weight: bold;
+      font-size: 20px;
     }
   </style>
   <body>
+    <header class="main-header">
+      <div class="main-header__brand">
+        <a href="index.html" class="main-header__brand-label"> uHost </a>
+      </div>
+      <nav class="main-header__nav">
+        <ul class="main-header__nav-items">
+          <li class="main-header__nav-item">
+            <a href="packages/index.html">Packages</a>
+          </li>
+          <li class="main-header__nav-item">
+            <a href="customers/index.html">Customers</a>
+          </li>
+          <li class="main-header__nav-item main-header__nav-item--cta">
+            <a href="start-hosting/index.html">Start Hosting</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
     <main>
       <section id="product-overview">
         <h1>Get the freedom you deserve.</h1>
       </section>
-      <section id="plans"><h1>Get the freedom you deserve.</h1></section>
-      <p>Make sure you get the most for your money!</p>
+      <section id="plans">
+        <h1>Choose your plan</h1>
+        <div class="plan__list">
+          <article class="plan">
+            <h1 class="plan__title">FREE</h1>
+            <h2 class="plan__price">$0/month</h2>
+            <h3>For hobby projects or small teams.</h3>
+            <ul class="plan__features">
+              <li>1 Workspace</li>
+              <li>Unlimited Traffic</li>
+              <li>10GB Storage</li>
+              <li>Basic Support</li>
+            </ul>
+            <div><button class="button">CHOOSE PLAN</button></div>
+          </article>
+          <article class="plan plan--highlighted">
+            <h1 class="plan__annotation">RECOMMENDED</h1>
+            <h1 class="plan__title">PLUS</h1>
+            <h2 class="plan__price">$29/month</h2>
+            <h3>For ambitious projects.</h3>
+            <ul class="plan__features">
+              <li>5 Workspaces</li>
+              <li>Unlimited Traffic</li>
+              <li>100GB Storage</li>
+              <li>Plus Support</li>
+            </ul>
+            <div><button class="button">CHOOSE PLAN</button></div>
+          </article>
+          <article class="plan">
+            <h1 class="plan__title">PREMIUM</h1>
+            <h2 class="plan__price">$99/month</h2>
+            <h3>Your enterprise solution.</h3>
+            <ul class="plan__features">
+              <li>10 Workspaces</li>
+              <li>Unlimited Traffic</li>
+              <li>Unlimited Storage</li>
+              <li>Priority Support</li>
+            </ul>
+            <div><button class="button">CHOOSE PLAN</button></div>
+          </article>
+        </div>
+        <p>Make sure you get the most for your money!</p>
+      </section>
+      <section id="key-features">
+        <h1>Many Good Reasons to Stick Around</h1>
+        <ul class="key-feature__list">
+          <li class="key-feature">
+            <div class="key-feature__image"></div>
+            <p class="key-feature__description">3,857,000 Trusting Customers</p>
+          </li>
+          <li class="key-feature">
+            <div class="key-feature__image"></div>
+            <p class="key-feature__description">99.999% Uptime Guarantee</p>
+          </li>
+          <li class="key-feature">
+            <div class="key-feature__image"></div>
+            <p class="key-feature__description">Lightning Fast CDN</p>
+          </li>
+        </ul>
+      </section>
     </main>
+    <footer class="main-footer">
+      <nav>
+        <ul>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Terms of Use</a></li>
+        </ul>
+      </nav>
+    </footer>
   </body>
 </html>

@@ -1,0 +1,75 @@
+main {
+  margin-top: 32px;
+}
+
+.plan {
+  background: lightcoral;
+  width: 80%;
+  padding: 30px;
+  margin: 16px 0px;
+  border: 2px solid rgb(231, 77, 77);
+  transition: all 0.2s;
+}
+
+.plan a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.plan__name {
+  font-size: 24px;
+}
+
+.plan__target {
+  color: #ddd;
+}
+
+.plan__description {
+  background: white;
+  color: black;
+  border: 1px solid black;
+  padding: 16px;
+}
+
+.clearfix {
+  clear: both;
+}
+
+#plus {
+  background: rgb(240, 111, 111);
+  border-left: none;
+}
+
+#plus .plan__description {
+  color: rgb(156, 82, 82);
+  border: 1px solid transparent;
+  border-left: none;
+  padding: 16px;
+}
+
+#free {
+  float: right;
+  background: rgb(240, 136, 136);
+  border-right: none;
+  border-left: 2px solid rgb(231, 77, 77);
+  text-align: right;
+}
+
+#premium {
+  background: rgb(233, 80, 80);
+  border: 2px solid rgb(233, 80, 80);
+}
+
+#premium .plan__description {
+  color: rgb(233, 80, 80);
+  border: 1px solid transparent;
+  padding: 16px;
+}
+
+.plan:hover,
+.plan:hover {
+  border: 2px solid red;
+  border-left: none;
+  box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.5);
+}
