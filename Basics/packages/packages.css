@@ -1,5 +1,5 @@
 main {
-  margin-top: 64px;
+  margin-top: 4rem;
 }
 body {
   margin: 0;
@@ -18,8 +18,8 @@ body {
   position: relative;
   background: lightcoral;
   width: 80%;
-  padding: 64px;
-  margin: 32px 0px;
+  padding: 4rem;
+  margin: 2rem 0px;
   border: 2px solid rgb(231, 77, 77);
   transition: all 0.2s;
 }
@@ -31,7 +31,7 @@ body {
 }
 
 .plan__name {
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 .plan__target {
@@ -42,19 +42,19 @@ body {
   position: absolute;
   top: 0;
   right: 0px;
-  font-size: 12px;
+  font-size: 0.66rem;
   background: white;
   color: lightcoral;
-  padding: 8px;
-  border-radius: 3px;
-  margin: 20px;
+  padding: 0.5rem;
+  border-radius: 0.2px;
+  margin: 1.25rem;
 }
 
 .plan__description {
   background: white;
   color: black;
   border: 1px solid black;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .clearfix {
@@ -71,7 +71,7 @@ body {
   color: rgb(156, 82, 82);
   border: 1px solid transparent;
   border-left: none;
-  padding: 16px;
+  padding: 1rem;
 }
 
 #free {
@@ -90,7 +90,7 @@ body {
 #premium .plan__description {
   color: rgb(233, 80, 80);
   border: 1px solid transparent;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .plan:hover,
