@@ -17,6 +17,55 @@ body {
   background: rgba(0, 0, 0, 0.5);
 }
 
+.modal {
+  position: fixed;
+  display: none;
+  z-index: 200;
+  top: 20%;
+  left: 30%;
+  width: 40%;
+  background: white;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.modal__title {
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+
+.modal__actions {
+  text-align: center;
+}
+
+.modal__action {
+  border: 1px solid #0e4f1f;
+  background: #0e4f1f;
+  text-decoration: none;
+  color: white;
+  font: inherit;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.modal__action:hover,
+.modal__action:active {
+  background: #2ddf5c;
+  border-color: #2ddf5c;
+}
+
+.modal__action--negative {
+  background: red;
+  border-color: red;
+}
+
+.modal__action--negative:hover,
+.modal__action--negative:active {
+  background: #ff5454;
+  border-color: #ff5454;
+}
+
 .main-header {
   top: 0;
   position: fixed;
@@ -41,12 +90,13 @@ body {
 }
 
 .main-header__brand-label > img {
+  vertical-align: middle;
   width: 100%;
 }
 
 .main-header__nav {
   vertical-align: middle;
-  width: calc(100% - 30px);
+  width: calc(100% - 120px);
   text-align: right;
   display: inline-block;
 }
@@ -62,7 +112,8 @@ body {
   display: inline-block;
 }
 
-.main-header__nav-item > a {
+.main-header__nav-item > a,
+.mobile-nav__item a {
   text-decoration: none;
   color: white;
   padding: 3px 0px;
@@ -74,7 +125,8 @@ body {
   padding: 3px 0px;
 }
 
-.main-header__nav-item--cta > a {
+.main-header__nav-item--cta > a,
+.mobile-nav__item--cta > a {
   color: white;
   background: lightcoral;
   padding: 8px 16px;
@@ -84,7 +136,9 @@ body {
 }
 
 .main-header__nav-item--cta > a:hover,
-.main-header__nav-item--cta > a:active {
+.main-header__nav-item--cta > a:active,
+.mobile-nav__item--cta > a:hover,
+.mobile-nav__item--cta > a:active {
   color: lightcoral;
   background: white;
   border: 1px solid white;
@@ -120,6 +174,59 @@ body {
   color: #ccc;
 }
 
+.mobile-nav {
+  display: none;
+  position: fixed;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  background: lightcoral;
+  width: 80%;
+  color: white;
+  height: 100vh;
+}
+
+.mobile-nav__items {
+  width: 90%;
+  height: 100%;
+  list-style: none;
+  margin: 10% auto;
+  padding: 0;
+  text-align: center;
+}
+
+.mobile-nav__item {
+  margin: 1rem 0;
+  color: white;
+}
+
+.mobile-nav__item a {
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.toggle-button {
+  width: 3rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding-top: 0;
+  padding-bottom: 0;
+  vertical-align: middle;
+}
+
+.toggle-button:focus {
+  outline: none;
+}
+
+.toggle-button__bar {
+  width: 100%;
+  height: 0.2rem;
+  background: white;
+  display: block;
+  margin: 0.4rem 0;
+}
+
 .button {
   background: rgb(219, 94, 94);
   border: 1px solid transparent;
@@ -134,4 +241,8 @@ body {
 .button:hover {
   background: white;
   color: rgb(219, 94, 94);
+}
+
+.open {
+  display: block !important;
 }
