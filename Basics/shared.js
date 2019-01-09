@@ -1,6 +1,8 @@
 var backdrop = document.querySelector(".backdrop");
 var modal = document.querySelector(".modal");
-var selectPlanButtons = document.querySelectorAll(".plan .button");
+var selectPlanButtons = document.querySelectorAll(
+  ".plan > div > button.button"
+);
 var toggleButton = document.querySelector(".toggle-button");
 var sideNavbar = document.querySelector(".mobile-nav");
 var modalNoButton = document.querySelector(".modal .modal__action--negative");

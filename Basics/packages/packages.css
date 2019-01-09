@@ -99,3 +99,16 @@ body {
   border-left: none;
   box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.5);
 }
+
+@media (min-width: 40rem) {
+  .plan {
+    position: relative;
+    background: lightcoral;
+    max-width: 1200px;
+    width: 80%;
+    padding: 4rem;
+    margin: 2rem 0px;
+    border: 2px solid rgb(231, 77, 77);
+    transition: all 0.2s;
+  }
+}
