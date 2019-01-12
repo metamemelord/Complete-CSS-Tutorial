@@ -1,0 +1,98 @@
+main {
+  padding-top: 0.1rem;
+}
+
+.signup-title {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #ff5454;
+}
+
+.signup-form {
+  padding: 2rem;
+}
+
+.signup-form > label {
+  font-weight: bold;
+}
+
+.signup-form > label,
+.signup-form > input,
+.signup-form > select {
+  margin: auto auto;
+  display: block;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.signup-form > label:invalid,
+.signup-form > input:invalid,
+.signup-form > select:invalid {
+  border-color: red !important;
+  background: rgb(240, 64, 64) !important;
+}
+
+.signup-form > input[type="checkbox"],
+.signup-form > input[type="checkbox"] + label {
+  vertical-align: middle;
+  display: inline-block;
+  width: auto;
+}
+
+.signup-form > input:not([type="checkbox"]),
+.signup-form > select {
+  border: 1px solid #ccc;
+  padding: 0.2rem 0.5rem;
+  font: inherit;
+}
+
+.signup-form > input:not([type="checkbox"]):focus,
+.signup-form > select:focus {
+  outline: none;
+  border-color: lightcoral;
+  background: rgb(255, 250, 250);
+}
+
+.signup-form > input[type="checkbox"] {
+  border: 1px solid #ccc;
+  background: white;
+  width: 1rem;
+  height: 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+.signup-form > input[type="checkbox"]:checked {
+  border-color: lightcoral;
+  background: lightcoral;
+}
+
+.signup-form button[type="submit"] {
+  display: block;
+  margin-top: 1rem;
+}
+
+.button:hover {
+  border-color: lightcoral;
+}
+
+.button[disabled] {
+  background: #ccc;
+  border: none;
+  cursor: not-allowed;
+  color: #a1a1a1;
+}
+
+.button[disabled]:hover {
+  background: #ccc;
+  border: none;
+}
+
+@media (min-width: 40rem) {
+  .signup-form {
+    margin: auto;
+    width: 25rem;
+  }
+}
