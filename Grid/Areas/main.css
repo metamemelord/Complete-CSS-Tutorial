@@ -1,0 +1,32 @@
+body {
+  display: grid;
+  margin: 0;
+  height: 100vh;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 4rem auto 4rem;
+  grid-template-areas: "header header header header" "side main main main" "footer footer footer footer";
+}
+
+header {
+  background: blue;
+  color: white;
+  grid-area: header;
+}
+
+main {
+  background: red;
+  color: white;
+  grid-area: side;
+}
+
+aside {
+  background: green;
+  color: white;
+  grid-area: main;
+}
+
+footer {
+  background: purple;
+  color: white;
+  grid-area: footer;
+}
