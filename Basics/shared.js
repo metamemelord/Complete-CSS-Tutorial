@@ -7,6 +7,7 @@ var toggleButton = document.querySelector(".toggle-button");
 var sideNavbar = document.querySelector(".mobile-nav");
 var modalNoButton = document.querySelector(".modal .modal__action--negative");
 var plans = document.querySelectorAll(".plan");
+var ctaButton = document.querySelector(".main-header__nav-item--cta");
 
 for (var i = 0; i < selectPlanButtons.length; i++) {
   selectPlanButtons[i].addEventListener("click", function() {
@@ -43,3 +44,14 @@ toggleButton.addEventListener("click", function() {
 if (modalNoButton) {
   modalNoButton.addEventListener("click", closeModal);
 }
+
+ctaButton.addEventListener("animationstart", function(event) {
+  console.log("animation started", event);
+});
+
+ctaButton.addEventListener("animationend", function(event) {
+  console.log("animation end", event);
+});
+ctaButton.addEventListener("animationiteration", function(event) {
+  console.log("animation iteration", event);
+});

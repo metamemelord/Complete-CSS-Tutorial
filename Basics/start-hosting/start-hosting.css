@@ -10,18 +10,21 @@ main {
 
 .signup-form {
   padding: 2rem;
+  display: grid;
 }
 
 .signup-form > label {
   font-weight: bold;
 }
 
+select#title {
+  grid-column: 2 span;
+}
+
 .signup-form > label,
 .signup-form > input,
 .signup-form > select {
-  margin: auto auto;
   display: block;
-  margin-top: 1rem;
   width: 100%;
 }
 
@@ -69,9 +72,12 @@ main {
   background: lightcoral;
 }
 
+.signup-form__checkbox {
+  grid-column-end: span 2;
+}
+
 .signup-form button[type="submit"] {
   display: block;
-  margin-top: 1rem;
 }
 
 .button:hover {
@@ -94,5 +100,7 @@ main {
   .signup-form {
     margin: auto;
     width: 25rem;
+    grid-template-columns: 8rem auto;
+    grid-gap: 2rem 2rem;
   }
 }

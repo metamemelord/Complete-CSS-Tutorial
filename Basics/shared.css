@@ -34,7 +34,10 @@ main {
 
 .modal {
   position: fixed;
-  display: none;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(-3rem);
   z-index: 200;
   top: 20%;
   left: 30%;
@@ -43,6 +46,7 @@ main {
   padding: 1rem;
   border: 1px solid #ccc;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  transition: opacity 200ms ease-out, transform 500ms ease-out;
 }
 
 .modal__title {
@@ -136,6 +140,10 @@ main {
 .main-header__nav-item > a:active {
   border-bottom: 2px solid white;
   padding: 3px 0px;
+}
+
+.main-header__nav-item--cta {
+  animation: wiggle 200ms 8 alternate;
 }
 
 .main-header__nav-item--cta > a,
@@ -262,6 +270,8 @@ main {
 
 .open {
   display: flex !important;
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
 
 @media (min-width: 40rem) {
@@ -279,5 +289,17 @@ main {
   .main-footer ul {
     flex-direction: row;
     justify-content: center;
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotateZ(-10deg);
+  }
+  50% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(10deg);
   }
 }
